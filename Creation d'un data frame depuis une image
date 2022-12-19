@@ -1,0 +1,40 @@
+install.packages("magick")
+library(magick)
+image <- image_read("C:/Users/u99amo/Downloads/arrereplanjpg.jpg")
+
+#arrereplanjpg.jpg
+
+
+
+df <- image_data(image)
+df <- as.matrix(df)
+df<-data.frame(df)
+df[131309,1]
+df[309131,1]
+
+paste0(df[1000,1],df[2000,1],df[3000,1])
+
+x<- df%>%group_by(df)%>%tally()
+y<-df%>%filter(df!="ff")
+# Convertir l'image en image à trois canaux
+image <- image_quantize(image, colorspace = "gray")
+
+
+# Séparez les canaux de couleur
+red <- image_channel(image, "red")
+green <- image_channel(image, "green")
+blue <- image_channel(image, "blue")
+
+
+dfred <- image_data(red, channel = "gray")
+dfred<-data.frame(df)
+
+
+
+
+
+# Extraire les données de l'image sous forme de data frame
+df <- image_data(image)
+
+df<-data.frame(df)
+
