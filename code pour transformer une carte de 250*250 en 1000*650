@@ -1,0 +1,2050 @@
+#code pour transformer une carte de 250*250 en 1000*650----
+#1. Importation des modules - Fonctionne OK 
+
+
+#augmentionat horizontale (pas oublier de virer la derniere colonne)----
+# Carte_province1000658<- Carte_province%>%rename(C0L_001_A = COL1)%>%
+#   mutate(COL_001_B = C0L_001_A)%>%
+#   mutate(COL_001_C = C0L_001_A)%>%
+#   select(C0L_001_A,COL_001_B,COL_001_C )
+
+
+Carte_province1000658<-Carte_province%>%
+  rename(COL1001 = COL1)%>%
+  rename(COL1005 = COL2)%>%
+  rename(COL1009 = COL3)%>%
+  rename(COL1013 = COL4)%>%
+  rename(COL1017 = COL5)%>%
+  rename(COL1021 = COL6)%>%
+  rename(COL1025 = COL7)%>%
+  rename(COL1029 = COL8)%>%
+  rename(COL1033 = COL9)%>%
+  rename(COL1037 = COL10)%>%
+  rename(COL1041 = COL11)%>%
+  rename(COL1045 = COL12)%>%
+  rename(COL1049 = COL13)%>%
+  rename(COL1053 = COL14)%>%
+  rename(COL1057 = COL15)%>%
+  rename(COL1061 = COL16)%>%
+  rename(COL1065 = COL17)%>%
+  rename(COL1069 = COL18)%>%
+  rename(COL1073 = COL19)%>%
+  rename(COL1077 = COL20)%>%
+  rename(COL1081 = COL21)%>%
+  rename(COL1085 = COL22)%>%
+  rename(COL1089 = COL23)%>%
+  rename(COL1093 = COL24)%>%
+  rename(COL1097 = COL25)%>%
+  rename(COL1101 = COL26)%>%
+  rename(COL1105 = COL27)%>%
+  rename(COL1109 = COL28)%>%
+  rename(COL1113 = COL29)%>%
+  rename(COL1117 = COL30)%>%
+  rename(COL1121 = COL31)%>%
+  rename(COL1125 = COL32)%>%
+  rename(COL1129 = COL33)%>%
+  rename(COL1133 = COL34)%>%
+  rename(COL1137 = COL35)%>%
+  rename(COL1141 = COL36)%>%
+  rename(COL1145 = COL37)%>%
+  rename(COL1149 = COL38)%>%
+  rename(COL1153 = COL39)%>%
+  rename(COL1157 = COL40)%>%
+  rename(COL1161 = COL41)%>%
+  rename(COL1165 = COL42)%>%
+  rename(COL1169 = COL43)%>%
+  rename(COL1173 = COL44)%>%
+  rename(COL1177 = COL45)%>%
+  rename(COL1181 = COL46)%>%
+  rename(COL1185 = COL47)%>%
+  rename(COL1189 = COL48)%>%
+  rename(COL1193 = COL49)%>%
+  rename(COL1197 = COL50)%>%
+  rename(COL1201 = COL51)%>%
+  rename(COL1205 = COL52)%>%
+  rename(COL1209 = COL53)%>%
+  rename(COL1213 = COL54)%>%
+  rename(COL1217 = COL55)%>%
+  rename(COL1221 = COL56)%>%
+  rename(COL1225 = COL57)%>%
+  rename(COL1229 = COL58)%>%
+  rename(COL1233 = COL59)%>%
+  rename(COL1237 = COL60)%>%
+  rename(COL1241 = COL61)%>%
+  rename(COL1245 = COL62)%>%
+  rename(COL1249 = COL63)%>%
+  rename(COL1253 = COL64)%>%
+  rename(COL1257 = COL65)%>%
+  rename(COL1261 = COL66)%>%
+  rename(COL1265 = COL67)%>%
+  rename(COL1269 = COL68)%>%
+  rename(COL1273 = COL69)%>%
+  rename(COL1277 = COL70)%>%
+  rename(COL1281 = COL71)%>%
+  rename(COL1285 = COL72)%>%
+  rename(COL1289 = COL73)%>%
+  rename(COL1293 = COL74)%>%
+  rename(COL1297 = COL75)%>%
+  rename(COL1301 = COL76)%>%
+  rename(COL1305 = COL77)%>%
+  rename(COL1309 = COL78)%>%
+  rename(COL1313 = COL79)%>%
+  rename(COL1317 = COL80)%>%
+  rename(COL1321 = COL81)%>%
+  rename(COL1325 = COL82)%>%
+  rename(COL1329 = COL83)%>%
+  rename(COL1333 = COL84)%>%
+  rename(COL1337 = COL85)%>%
+  rename(COL1341 = COL86)%>%
+  rename(COL1345 = COL87)%>%
+  rename(COL1349 = COL88)%>%
+  rename(COL1353 = COL89)%>%
+  rename(COL1357 = COL90)%>%
+  rename(COL1361 = COL91)%>%
+  rename(COL1365 = COL92)%>%
+  rename(COL1369 = COL93)%>%
+  rename(COL1373 = COL94)%>%
+  rename(COL1377 = COL95)%>%
+  rename(COL1381 = COL96)%>%
+  rename(COL1385 = COL97)%>%
+  rename(COL1389 = COL98)%>%
+  rename(COL1393 = COL99)%>%
+  rename(COL1397 = COL100)%>%
+  rename(COL1401 = COL101)%>%
+  rename(COL1405 = COL102)%>%
+  rename(COL1409 = COL103)%>%
+  rename(COL1413 = COL104)%>%
+  rename(COL1417 = COL105)%>%
+  rename(COL1421 = COL106)%>%
+  rename(COL1425 = COL107)%>%
+  rename(COL1429 = COL108)%>%
+  rename(COL1433 = COL109)%>%
+  rename(COL1437 = COL110)%>%
+  rename(COL1441 = COL111)%>%
+  rename(COL1445 = COL112)%>%
+  rename(COL1449 = COL113)%>%
+  rename(COL1453 = COL114)%>%
+  rename(COL1457 = COL115)%>%
+  rename(COL1461 = COL116)%>%
+  rename(COL1465 = COL117)%>%
+  rename(COL1469 = COL118)%>%
+  rename(COL1473 = COL119)%>%
+  rename(COL1477 = COL120)%>%
+  rename(COL1481 = COL121)%>%
+  rename(COL1485 = COL122)%>%
+  rename(COL1489 = COL123)%>%
+  rename(COL1493 = COL124)%>%
+  rename(COL1497 = COL125)%>%
+  rename(COL1501 = COL126)%>%
+  rename(COL1505 = COL127)%>%
+  rename(COL1509 = COL128)%>%
+  rename(COL1513 = COL129)%>%
+  rename(COL1517 = COL130)%>%
+  rename(COL1521 = COL131)%>%
+  rename(COL1525 = COL132)%>%
+  rename(COL1529 = COL133)%>%
+  rename(COL1533 = COL134)%>%
+  rename(COL1537 = COL135)%>%
+  rename(COL1541 = COL136)%>%
+  rename(COL1545 = COL137)%>%
+  rename(COL1549 = COL138)%>%
+  rename(COL1553 = COL139)%>%
+  rename(COL1557 = COL140)%>%
+  rename(COL1561 = COL141)%>%
+  rename(COL1565 = COL142)%>%
+  rename(COL1569 = COL143)%>%
+  rename(COL1573 = COL144)%>%
+  rename(COL1577 = COL145)%>%
+  rename(COL1581 = COL146)%>%
+  rename(COL1585 = COL147)%>%
+  rename(COL1589 = COL148)%>%
+  rename(COL1593 = COL149)%>%
+  rename(COL1597 = COL150)%>%
+  rename(COL1601 = COL151)%>%
+  rename(COL1605 = COL152)%>%
+  rename(COL1609 = COL153)%>%
+  rename(COL1613 = COL154)%>%
+  rename(COL1617 = COL155)%>%
+  rename(COL1621 = COL156)%>%
+  rename(COL1625 = COL157)%>%
+  rename(COL1629 = COL158)%>%
+  rename(COL1633 = COL159)%>%
+  rename(COL1637 = COL160)%>%
+  rename(COL1641 = COL161)%>%
+  rename(COL1645 = COL162)%>%
+  rename(COL1649 = COL163)%>%
+  rename(COL1653 = COL164)%>%
+  rename(COL1657 = COL165)%>%
+  rename(COL1661 = COL166)%>%
+  rename(COL1665 = COL167)%>%
+  rename(COL1669 = COL168)%>%
+  rename(COL1673 = COL169)%>%
+  rename(COL1677 = COL170)%>%
+  rename(COL1681 = COL171)%>%
+  rename(COL1685 = COL172)%>%
+  rename(COL1689 = COL173)%>%
+  rename(COL1693 = COL174)%>%
+  rename(COL1697 = COL175)%>%
+  rename(COL1701 = COL176)%>%
+  rename(COL1705 = COL177)%>%
+  rename(COL1709 = COL178)%>%
+  rename(COL1713 = COL179)%>%
+  rename(COL1717 = COL180)%>%
+  rename(COL1721 = COL181)%>%
+  rename(COL1725 = COL182)%>%
+  rename(COL1729 = COL183)%>%
+  rename(COL1733 = COL184)%>%
+  rename(COL1737 = COL185)%>%
+  rename(COL1741 = COL186)%>%
+  rename(COL1745 = COL187)%>%
+  rename(COL1749 = COL188)%>%
+  rename(COL1753 = COL189)%>%
+  rename(COL1757 = COL190)%>%
+  rename(COL1761 = COL191)%>%
+  rename(COL1765 = COL192)%>%
+  rename(COL1769 = COL193)%>%
+  rename(COL1773 = COL194)%>%
+  rename(COL1777 = COL195)%>%
+  rename(COL1781 = COL196)%>%
+  rename(COL1785 = COL197)%>%
+  rename(COL1789 = COL198)%>%
+  rename(COL1793 = COL199)%>%
+  rename(COL1797 = COL200)%>%
+  rename(COL1801 = COL201)%>%
+  rename(COL1805 = COL202)%>%
+  rename(COL1809 = COL203)%>%
+  rename(COL1813 = COL204)%>%
+  rename(COL1817 = COL205)%>%
+  rename(COL1821 = COL206)%>%
+  rename(COL1825 = COL207)%>%
+  rename(COL1829 = COL208)%>%
+  rename(COL1833 = COL209)%>%
+  rename(COL1837 = COL210)%>%
+  rename(COL1841 = COL211)%>%
+  rename(COL1845 = COL212)%>%
+  rename(COL1849 = COL213)%>%
+  rename(COL1853 = COL214)%>%
+  rename(COL1857 = COL215)%>%
+  rename(COL1861 = COL216)%>%
+  rename(COL1865 = COL217)%>%
+  rename(COL1869 = COL218)%>%
+  rename(COL1873 = COL219)%>%
+  rename(COL1877 = COL220)%>%
+  rename(COL1881 = COL221)%>%
+  rename(COL1885 = COL222)%>%
+  rename(COL1889 = COL223)%>%
+  rename(COL1893 = COL224)%>%
+  rename(COL1897 = COL225)%>%
+  rename(COL1901 = COL226)%>%
+  rename(COL1905 = COL227)%>%
+  rename(COL1909 = COL228)%>%
+  rename(COL1913 = COL229)%>%
+  rename(COL1917 = COL230)%>%
+  rename(COL1921 = COL231)%>%
+  rename(COL1925 = COL232)%>%
+  rename(COL1929 = COL233)%>%
+  rename(COL1933 = COL234)%>%
+  rename(COL1937 = COL235)%>%
+  rename(COL1941 = COL236)%>%
+  rename(COL1945 = COL237)%>%
+  rename(COL1949 = COL238)%>%
+  rename(COL1953 = COL239)%>%
+  rename(COL1957 = COL240)%>%
+  rename(COL1961 = COL241)%>%
+  rename(COL1965 = COL242)%>%
+  rename(COL1969 = COL243)%>%
+  rename(COL1973 = COL244)%>%
+  rename(COL1977 = COL245)%>%
+  rename(COL1981 = COL246)%>%
+  rename(COL1985 = COL247)%>%
+  rename(COL1989 = COL248)%>%
+  rename(COL1993 = COL249)%>%
+  #rename(COL1997 = COL250)%>%
+  mutate(COL1002=COL1001)%>%
+  mutate(COL1006=COL1005)%>%
+  mutate(COL1010=COL1009)%>%
+  mutate(COL1014=COL1013)%>%
+  mutate(COL1018=COL1017)%>%
+  mutate(COL1022=COL1021)%>%
+  mutate(COL1026=COL1025)%>%
+  mutate(COL1030=COL1029)%>%
+  mutate(COL1034=COL1033)%>%
+  mutate(COL1038=COL1037)%>%
+  mutate(COL1042=COL1041)%>%
+  mutate(COL1046=COL1045)%>%
+  mutate(COL1050=COL1049)%>%
+  mutate(COL1054=COL1053)%>%
+  mutate(COL1058=COL1057)%>%
+  mutate(COL1062=COL1061)%>%
+  mutate(COL1066=COL1065)%>%
+  mutate(COL1070=COL1069)%>%
+  mutate(COL1074=COL1073)%>%
+  mutate(COL1078=COL1077)%>%
+  mutate(COL1082=COL1081)%>%
+  mutate(COL1086=COL1085)%>%
+  mutate(COL1090=COL1089)%>%
+  mutate(COL1094=COL1093)%>%
+  mutate(COL1098=COL1097)%>%
+  mutate(COL1102=COL1101)%>%
+  mutate(COL1106=COL1105)%>%
+  mutate(COL1110=COL1109)%>%
+  mutate(COL1114=COL1113)%>%
+  mutate(COL1118=COL1117)%>%
+  mutate(COL1122=COL1121)%>%
+  mutate(COL1126=COL1125)%>%
+  mutate(COL1130=COL1129)%>%
+  mutate(COL1134=COL1133)%>%
+  mutate(COL1138=COL1137)%>%
+  mutate(COL1142=COL1141)%>%
+  mutate(COL1146=COL1145)%>%
+  mutate(COL1150=COL1149)%>%
+  mutate(COL1154=COL1153)%>%
+  mutate(COL1158=COL1157)%>%
+  mutate(COL1162=COL1161)%>%
+  mutate(COL1166=COL1165)%>%
+  mutate(COL1170=COL1169)%>%
+  mutate(COL1174=COL1173)%>%
+  mutate(COL1178=COL1177)%>%
+  mutate(COL1182=COL1181)%>%
+  mutate(COL1186=COL1185)%>%
+  mutate(COL1190=COL1189)%>%
+  mutate(COL1194=COL1193)%>%
+  mutate(COL1198=COL1197)%>%
+  mutate(COL1202=COL1201)%>%
+  mutate(COL1206=COL1205)%>%
+  mutate(COL1210=COL1209)%>%
+  mutate(COL1214=COL1213)%>%
+  mutate(COL1218=COL1217)%>%
+  mutate(COL1222=COL1221)%>%
+  mutate(COL1226=COL1225)%>%
+  mutate(COL1230=COL1229)%>%
+  mutate(COL1234=COL1233)%>%
+  mutate(COL1238=COL1237)%>%
+  mutate(COL1242=COL1241)%>%
+  mutate(COL1246=COL1245)%>%
+  mutate(COL1250=COL1249)%>%
+  mutate(COL1254=COL1253)%>%
+  mutate(COL1258=COL1257)%>%
+  mutate(COL1262=COL1261)%>%
+  mutate(COL1266=COL1265)%>%
+  mutate(COL1270=COL1269)%>%
+  mutate(COL1274=COL1273)%>%
+  mutate(COL1278=COL1277)%>%
+  mutate(COL1282=COL1281)%>%
+  mutate(COL1286=COL1285)%>%
+  mutate(COL1290=COL1289)%>%
+  mutate(COL1294=COL1293)%>%
+  mutate(COL1298=COL1297)%>%
+  mutate(COL1302=COL1301)%>%
+  mutate(COL1306=COL1305)%>%
+  mutate(COL1310=COL1309)%>%
+  mutate(COL1314=COL1313)%>%
+  mutate(COL1318=COL1317)%>%
+  mutate(COL1322=COL1321)%>%
+  mutate(COL1326=COL1325)%>%
+  mutate(COL1330=COL1329)%>%
+  mutate(COL1334=COL1333)%>%
+  mutate(COL1338=COL1337)%>%
+  mutate(COL1342=COL1341)%>%
+  mutate(COL1346=COL1345)%>%
+  mutate(COL1350=COL1349)%>%
+  mutate(COL1354=COL1353)%>%
+  mutate(COL1358=COL1357)%>%
+  mutate(COL1362=COL1361)%>%
+  mutate(COL1366=COL1365)%>%
+  mutate(COL1370=COL1369)%>%
+  mutate(COL1374=COL1373)%>%
+  mutate(COL1378=COL1377)%>%
+  mutate(COL1382=COL1381)%>%
+  mutate(COL1386=COL1385)%>%
+  mutate(COL1390=COL1389)%>%
+  mutate(COL1394=COL1393)%>%
+  mutate(COL1398=COL1397)%>%
+  mutate(COL1402=COL1401)%>%
+  mutate(COL1406=COL1405)%>%
+  mutate(COL1410=COL1409)%>%
+  mutate(COL1414=COL1413)%>%
+  mutate(COL1418=COL1417)%>%
+  mutate(COL1422=COL1421)%>%
+  mutate(COL1426=COL1425)%>%
+  mutate(COL1430=COL1429)%>%
+  mutate(COL1434=COL1433)%>%
+  mutate(COL1438=COL1437)%>%
+  mutate(COL1442=COL1441)%>%
+  mutate(COL1446=COL1445)%>%
+  mutate(COL1450=COL1449)%>%
+  mutate(COL1454=COL1453)%>%
+  mutate(COL1458=COL1457)%>%
+  mutate(COL1462=COL1461)%>%
+  mutate(COL1466=COL1465)%>%
+  mutate(COL1470=COL1469)%>%
+  mutate(COL1474=COL1473)%>%
+  mutate(COL1478=COL1477)%>%
+  mutate(COL1482=COL1481)%>%
+  mutate(COL1486=COL1485)%>%
+  mutate(COL1490=COL1489)%>%
+  mutate(COL1494=COL1493)%>%
+  mutate(COL1498=COL1497)%>%
+  mutate(COL1502=COL1501)%>%
+  mutate(COL1506=COL1505)%>%
+  mutate(COL1510=COL1509)%>%
+  mutate(COL1514=COL1513)%>%
+  mutate(COL1518=COL1517)%>%
+  mutate(COL1522=COL1521)%>%
+  mutate(COL1526=COL1525)%>%
+  mutate(COL1530=COL1529)%>%
+  mutate(COL1534=COL1533)%>%
+  mutate(COL1538=COL1537)%>%
+  mutate(COL1542=COL1541)%>%
+  mutate(COL1546=COL1545)%>%
+  mutate(COL1550=COL1549)%>%
+  mutate(COL1554=COL1553)%>%
+  mutate(COL1558=COL1557)%>%
+  mutate(COL1562=COL1561)%>%
+  mutate(COL1566=COL1565)%>%
+  mutate(COL1570=COL1569)%>%
+  mutate(COL1574=COL1573)%>%
+  mutate(COL1578=COL1577)%>%
+  mutate(COL1582=COL1581)%>%
+  mutate(COL1586=COL1585)%>%
+  mutate(COL1590=COL1589)%>%
+  mutate(COL1594=COL1593)%>%
+  mutate(COL1598=COL1597)%>%
+  mutate(COL1602=COL1601)%>%
+  mutate(COL1606=COL1605)%>%
+  mutate(COL1610=COL1609)%>%
+  mutate(COL1614=COL1613)%>%
+  mutate(COL1618=COL1617)%>%
+  mutate(COL1622=COL1621)%>%
+  mutate(COL1626=COL1625)%>%
+  mutate(COL1630=COL1629)%>%
+  mutate(COL1634=COL1633)%>%
+  mutate(COL1638=COL1637)%>%
+  mutate(COL1642=COL1641)%>%
+  mutate(COL1646=COL1645)%>%
+  mutate(COL1650=COL1649)%>%
+  mutate(COL1654=COL1653)%>%
+  mutate(COL1658=COL1657)%>%
+  mutate(COL1662=COL1661)%>%
+  mutate(COL1666=COL1665)%>%
+  mutate(COL1670=COL1669)%>%
+  mutate(COL1674=COL1673)%>%
+  mutate(COL1678=COL1677)%>%
+  mutate(COL1682=COL1681)%>%
+  mutate(COL1686=COL1685)%>%
+  mutate(COL1690=COL1689)%>%
+  mutate(COL1694=COL1693)%>%
+  mutate(COL1698=COL1697)%>%
+  mutate(COL1702=COL1701)%>%
+  mutate(COL1706=COL1705)%>%
+  mutate(COL1710=COL1709)%>%
+  mutate(COL1714=COL1713)%>%
+  mutate(COL1718=COL1717)%>%
+  mutate(COL1722=COL1721)%>%
+  mutate(COL1726=COL1725)%>%
+  mutate(COL1730=COL1729)%>%
+  mutate(COL1734=COL1733)%>%
+  mutate(COL1738=COL1737)%>%
+  mutate(COL1742=COL1741)%>%
+  mutate(COL1746=COL1745)%>%
+  mutate(COL1750=COL1749)%>%
+  mutate(COL1754=COL1753)%>%
+  mutate(COL1758=COL1757)%>%
+  mutate(COL1762=COL1761)%>%
+  mutate(COL1766=COL1765)%>%
+  mutate(COL1770=COL1769)%>%
+  mutate(COL1774=COL1773)%>%
+  mutate(COL1778=COL1777)%>%
+  mutate(COL1782=COL1781)%>%
+  mutate(COL1786=COL1785)%>%
+  mutate(COL1790=COL1789)%>%
+  mutate(COL1794=COL1793)%>%
+  mutate(COL1798=COL1797)%>%
+  mutate(COL1802=COL1801)%>%
+  mutate(COL1806=COL1805)%>%
+  mutate(COL1810=COL1809)%>%
+  mutate(COL1814=COL1813)%>%
+  mutate(COL1818=COL1817)%>%
+  mutate(COL1822=COL1821)%>%
+  mutate(COL1826=COL1825)%>%
+  mutate(COL1830=COL1829)%>%
+  mutate(COL1834=COL1833)%>%
+  mutate(COL1838=COL1837)%>%
+  mutate(COL1842=COL1841)%>%
+  mutate(COL1846=COL1845)%>%
+  mutate(COL1850=COL1849)%>%
+  mutate(COL1854=COL1853)%>%
+  mutate(COL1858=COL1857)%>%
+  mutate(COL1862=COL1861)%>%
+  mutate(COL1866=COL1865)%>%
+  mutate(COL1870=COL1869)%>%
+  mutate(COL1874=COL1873)%>%
+  mutate(COL1878=COL1877)%>%
+  mutate(COL1882=COL1881)%>%
+  mutate(COL1886=COL1885)%>%
+  mutate(COL1890=COL1889)%>%
+  mutate(COL1894=COL1893)%>%
+  mutate(COL1898=COL1897)%>%
+  mutate(COL1902=COL1901)%>%
+  mutate(COL1906=COL1905)%>%
+  mutate(COL1910=COL1909)%>%
+  mutate(COL1914=COL1913)%>%
+  mutate(COL1918=COL1917)%>%
+  mutate(COL1922=COL1921)%>%
+  mutate(COL1926=COL1925)%>%
+  mutate(COL1930=COL1929)%>%
+  mutate(COL1934=COL1933)%>%
+  mutate(COL1938=COL1937)%>%
+  mutate(COL1942=COL1941)%>%
+  mutate(COL1946=COL1945)%>%
+  mutate(COL1950=COL1949)%>%
+  mutate(COL1954=COL1953)%>%
+  mutate(COL1958=COL1957)%>%
+  mutate(COL1962=COL1961)%>%
+  mutate(COL1966=COL1965)%>%
+  mutate(COL1970=COL1969)%>%
+  mutate(COL1974=COL1973)%>%
+  mutate(COL1978=COL1977)%>%
+  mutate(COL1982=COL1981)%>%
+  mutate(COL1986=COL1985)%>%
+  mutate(COL1990=COL1989)%>%
+  mutate(COL1994=COL1993)%>%
+  #mutate(COL1998=COL1997)%>%
+  mutate(COL1003=COL1001)%>%
+  mutate(COL1007=COL1005)%>%
+  mutate(COL1011=COL1009)%>%
+  mutate(COL1015=COL1013)%>%
+  mutate(COL1019=COL1017)%>%
+  mutate(COL1023=COL1021)%>%
+  mutate(COL1027=COL1025)%>%
+  mutate(COL1031=COL1029)%>%
+  mutate(COL1035=COL1033)%>%
+  mutate(COL1039=COL1037)%>%
+  mutate(COL1043=COL1041)%>%
+  mutate(COL1047=COL1045)%>%
+  mutate(COL1051=COL1049)%>%
+  mutate(COL1055=COL1053)%>%
+  mutate(COL1059=COL1057)%>%
+  mutate(COL1063=COL1061)%>%
+  mutate(COL1067=COL1065)%>%
+  mutate(COL1071=COL1069)%>%
+  mutate(COL1075=COL1073)%>%
+  mutate(COL1079=COL1077)%>%
+  mutate(COL1083=COL1081)%>%
+  mutate(COL1087=COL1085)%>%
+  mutate(COL1091=COL1089)%>%
+  mutate(COL1095=COL1093)%>%
+  mutate(COL1099=COL1097)%>%
+  mutate(COL1103=COL1101)%>%
+  mutate(COL1107=COL1105)%>%
+  mutate(COL1111=COL1109)%>%
+  mutate(COL1115=COL1113)%>%
+  mutate(COL1119=COL1117)%>%
+  mutate(COL1123=COL1121)%>%
+  mutate(COL1127=COL1125)%>%
+  mutate(COL1131=COL1129)%>%
+  mutate(COL1135=COL1133)%>%
+  mutate(COL1139=COL1137)%>%
+  mutate(COL1143=COL1141)%>%
+  mutate(COL1147=COL1145)%>%
+  mutate(COL1151=COL1149)%>%
+  mutate(COL1155=COL1153)%>%
+  mutate(COL1159=COL1157)%>%
+  mutate(COL1163=COL1161)%>%
+  mutate(COL1167=COL1165)%>%
+  mutate(COL1171=COL1169)%>%
+  mutate(COL1175=COL1173)%>%
+  mutate(COL1179=COL1177)%>%
+  mutate(COL1183=COL1181)%>%
+  mutate(COL1187=COL1185)%>%
+  mutate(COL1191=COL1189)%>%
+  mutate(COL1195=COL1193)%>%
+  mutate(COL1199=COL1197)%>%
+  mutate(COL1203=COL1201)%>%
+  mutate(COL1207=COL1205)%>%
+  mutate(COL1211=COL1209)%>%
+  mutate(COL1215=COL1213)%>%
+  mutate(COL1219=COL1217)%>%
+  mutate(COL1223=COL1221)%>%
+  mutate(COL1227=COL1225)%>%
+  mutate(COL1231=COL1229)%>%
+  mutate(COL1235=COL1233)%>%
+  mutate(COL1239=COL1237)%>%
+  mutate(COL1243=COL1241)%>%
+  mutate(COL1247=COL1245)%>%
+  mutate(COL1251=COL1249)%>%
+  mutate(COL1255=COL1253)%>%
+  mutate(COL1259=COL1257)%>%
+  mutate(COL1263=COL1261)%>%
+  mutate(COL1267=COL1265)%>%
+  mutate(COL1271=COL1269)%>%
+  mutate(COL1275=COL1273)%>%
+  mutate(COL1279=COL1277)%>%
+  mutate(COL1283=COL1281)%>%
+  mutate(COL1287=COL1285)%>%
+  mutate(COL1291=COL1289)%>%
+  mutate(COL1295=COL1293)%>%
+  mutate(COL1299=COL1297)%>%
+  mutate(COL1303=COL1301)%>%
+  mutate(COL1307=COL1305)%>%
+  mutate(COL1311=COL1309)%>%
+  mutate(COL1315=COL1313)%>%
+  mutate(COL1319=COL1317)%>%
+  mutate(COL1323=COL1321)%>%
+  mutate(COL1327=COL1325)%>%
+  mutate(COL1331=COL1329)%>%
+  mutate(COL1335=COL1333)%>%
+  mutate(COL1339=COL1337)%>%
+  mutate(COL1343=COL1341)%>%
+  mutate(COL1347=COL1345)%>%
+  mutate(COL1351=COL1349)%>%
+  mutate(COL1355=COL1353)%>%
+  mutate(COL1359=COL1357)%>%
+  mutate(COL1363=COL1361)%>%
+  mutate(COL1367=COL1365)%>%
+  mutate(COL1371=COL1369)%>%
+  mutate(COL1375=COL1373)%>%
+  mutate(COL1379=COL1377)%>%
+  mutate(COL1383=COL1381)%>%
+  mutate(COL1387=COL1385)%>%
+  mutate(COL1391=COL1389)%>%
+  mutate(COL1395=COL1393)%>%
+  mutate(COL1399=COL1397)%>%
+  mutate(COL1403=COL1401)%>%
+  mutate(COL1407=COL1405)%>%
+  mutate(COL1411=COL1409)%>%
+  mutate(COL1415=COL1413)%>%
+  mutate(COL1419=COL1417)%>%
+  mutate(COL1423=COL1421)%>%
+  mutate(COL1427=COL1425)%>%
+  mutate(COL1431=COL1429)%>%
+  mutate(COL1435=COL1433)%>%
+  mutate(COL1439=COL1437)%>%
+  mutate(COL1443=COL1441)%>%
+  mutate(COL1447=COL1445)%>%
+  mutate(COL1451=COL1449)%>%
+  mutate(COL1455=COL1453)%>%
+  mutate(COL1459=COL1457)%>%
+  mutate(COL1463=COL1461)%>%
+  mutate(COL1467=COL1465)%>%
+  mutate(COL1471=COL1469)%>%
+  mutate(COL1475=COL1473)%>%
+  mutate(COL1479=COL1477)%>%
+  mutate(COL1483=COL1481)%>%
+  mutate(COL1487=COL1485)%>%
+  mutate(COL1491=COL1489)%>%
+  mutate(COL1495=COL1493)%>%
+  mutate(COL1499=COL1497)%>%
+  mutate(COL1503=COL1501)%>%
+  mutate(COL1507=COL1505)%>%
+  mutate(COL1511=COL1509)%>%
+  mutate(COL1515=COL1513)%>%
+  mutate(COL1519=COL1517)%>%
+  mutate(COL1523=COL1521)%>%
+  mutate(COL1527=COL1525)%>%
+  mutate(COL1531=COL1529)%>%
+  mutate(COL1535=COL1533)%>%
+  mutate(COL1539=COL1537)%>%
+  mutate(COL1543=COL1541)%>%
+  mutate(COL1547=COL1545)%>%
+  mutate(COL1551=COL1549)%>%
+  mutate(COL1555=COL1553)%>%
+  mutate(COL1559=COL1557)%>%
+  mutate(COL1563=COL1561)%>%
+  mutate(COL1567=COL1565)%>%
+  mutate(COL1571=COL1569)%>%
+  mutate(COL1575=COL1573)%>%
+  mutate(COL1579=COL1577)%>%
+  mutate(COL1583=COL1581)%>%
+  mutate(COL1587=COL1585)%>%
+  mutate(COL1591=COL1589)%>%
+  mutate(COL1595=COL1593)%>%
+  mutate(COL1599=COL1597)%>%
+  mutate(COL1603=COL1601)%>%
+  mutate(COL1607=COL1605)%>%
+  mutate(COL1611=COL1609)%>%
+  mutate(COL1615=COL1613)%>%
+  mutate(COL1619=COL1617)%>%
+  mutate(COL1623=COL1621)%>%
+  mutate(COL1627=COL1625)%>%
+  mutate(COL1631=COL1629)%>%
+  mutate(COL1635=COL1633)%>%
+  mutate(COL1639=COL1637)%>%
+  mutate(COL1643=COL1641)%>%
+  mutate(COL1647=COL1645)%>%
+  mutate(COL1651=COL1649)%>%
+  mutate(COL1655=COL1653)%>%
+  mutate(COL1659=COL1657)%>%
+  mutate(COL1663=COL1661)%>%
+  mutate(COL1667=COL1665)%>%
+  mutate(COL1671=COL1669)%>%
+  mutate(COL1675=COL1673)%>%
+  mutate(COL1679=COL1677)%>%
+  mutate(COL1683=COL1681)%>%
+  mutate(COL1687=COL1685)%>%
+  mutate(COL1691=COL1689)%>%
+  mutate(COL1695=COL1693)%>%
+  mutate(COL1699=COL1697)%>%
+  mutate(COL1703=COL1701)%>%
+  mutate(COL1707=COL1705)%>%
+  mutate(COL1711=COL1709)%>%
+  mutate(COL1715=COL1713)%>%
+  mutate(COL1719=COL1717)%>%
+  mutate(COL1723=COL1721)%>%
+  mutate(COL1727=COL1725)%>%
+  mutate(COL1731=COL1729)%>%
+  mutate(COL1735=COL1733)%>%
+  mutate(COL1739=COL1737)%>%
+  mutate(COL1743=COL1741)%>%
+  mutate(COL1747=COL1745)%>%
+  mutate(COL1751=COL1749)%>%
+  mutate(COL1755=COL1753)%>%
+  mutate(COL1759=COL1757)%>%
+  mutate(COL1763=COL1761)%>%
+  mutate(COL1767=COL1765)%>%
+  mutate(COL1771=COL1769)%>%
+  mutate(COL1775=COL1773)%>%
+  mutate(COL1779=COL1777)%>%
+  mutate(COL1783=COL1781)%>%
+  mutate(COL1787=COL1785)%>%
+  mutate(COL1791=COL1789)%>%
+  mutate(COL1795=COL1793)%>%
+  mutate(COL1799=COL1797)%>%
+  mutate(COL1803=COL1801)%>%
+  mutate(COL1807=COL1805)%>%
+  mutate(COL1811=COL1809)%>%
+  mutate(COL1815=COL1813)%>%
+  mutate(COL1819=COL1817)%>%
+  mutate(COL1823=COL1821)%>%
+  mutate(COL1827=COL1825)%>%
+  mutate(COL1831=COL1829)%>%
+  mutate(COL1835=COL1833)%>%
+  mutate(COL1839=COL1837)%>%
+  mutate(COL1843=COL1841)%>%
+  mutate(COL1847=COL1845)%>%
+  mutate(COL1851=COL1849)%>%
+  mutate(COL1855=COL1853)%>%
+  mutate(COL1859=COL1857)%>%
+  mutate(COL1863=COL1861)%>%
+  mutate(COL1867=COL1865)%>%
+  mutate(COL1871=COL1869)%>%
+  mutate(COL1875=COL1873)%>%
+  mutate(COL1879=COL1877)%>%
+  mutate(COL1883=COL1881)%>%
+  mutate(COL1887=COL1885)%>%
+  mutate(COL1891=COL1889)%>%
+  mutate(COL1895=COL1893)%>%
+  mutate(COL1899=COL1897)%>%
+  mutate(COL1903=COL1901)%>%
+  mutate(COL1907=COL1905)%>%
+  mutate(COL1911=COL1909)%>%
+  mutate(COL1915=COL1913)%>%
+  mutate(COL1919=COL1917)%>%
+  mutate(COL1923=COL1921)%>%
+  mutate(COL1927=COL1925)%>%
+  mutate(COL1931=COL1929)%>%
+  mutate(COL1935=COL1933)%>%
+  mutate(COL1939=COL1937)%>%
+  mutate(COL1943=COL1941)%>%
+  mutate(COL1947=COL1945)%>%
+  mutate(COL1951=COL1949)%>%
+  mutate(COL1955=COL1953)%>%
+  mutate(COL1959=COL1957)%>%
+  mutate(COL1963=COL1961)%>%
+  mutate(COL1967=COL1965)%>%
+  mutate(COL1971=COL1969)%>%
+  mutate(COL1975=COL1973)%>%
+  mutate(COL1979=COL1977)%>%
+  mutate(COL1983=COL1981)%>%
+  mutate(COL1987=COL1985)%>%
+  mutate(COL1991=COL1989)%>%
+  mutate(COL1995=COL1993)%>%
+  #mutate(COL1999=COL1997)%>%
+  mutate(COL1004=COL1001)%>%
+  mutate(COL1008=COL1005)%>%
+  mutate(COL1012=COL1009)%>%
+  mutate(COL1016=COL1013)%>%
+  mutate(COL1020=COL1017)%>%
+  mutate(COL1024=COL1021)%>%
+  mutate(COL1028=COL1025)%>%
+  mutate(COL1032=COL1029)%>%
+  mutate(COL1036=COL1033)%>%
+  mutate(COL1040=COL1037)%>%
+  mutate(COL1044=COL1041)%>%
+  mutate(COL1048=COL1045)%>%
+  mutate(COL1052=COL1049)%>%
+  mutate(COL1056=COL1053)%>%
+  mutate(COL1060=COL1057)%>%
+  mutate(COL1064=COL1061)%>%
+  mutate(COL1068=COL1065)%>%
+  mutate(COL1072=COL1069)%>%
+  mutate(COL1076=COL1073)%>%
+  mutate(COL1080=COL1077)%>%
+  mutate(COL1084=COL1081)%>%
+  mutate(COL1088=COL1085)%>%
+  mutate(COL1092=COL1089)%>%
+  mutate(COL1096=COL1093)%>%
+  mutate(COL1100=COL1097)%>%
+  mutate(COL1104=COL1101)%>%
+  mutate(COL1108=COL1105)%>%
+  mutate(COL1112=COL1109)%>%
+  mutate(COL1116=COL1113)%>%
+  mutate(COL1120=COL1117)%>%
+  mutate(COL1124=COL1121)%>%
+  mutate(COL1128=COL1125)%>%
+  mutate(COL1132=COL1129)%>%
+  mutate(COL1136=COL1133)%>%
+  mutate(COL1140=COL1137)%>%
+  mutate(COL1144=COL1141)%>%
+  mutate(COL1148=COL1145)%>%
+  mutate(COL1152=COL1149)%>%
+  mutate(COL1156=COL1153)%>%
+  mutate(COL1160=COL1157)%>%
+  mutate(COL1164=COL1161)%>%
+  mutate(COL1168=COL1165)%>%
+  mutate(COL1172=COL1169)%>%
+  mutate(COL1176=COL1173)%>%
+  mutate(COL1180=COL1177)%>%
+  mutate(COL1184=COL1181)%>%
+  mutate(COL1188=COL1185)%>%
+  mutate(COL1192=COL1189)%>%
+  mutate(COL1196=COL1193)%>%
+  mutate(COL1200=COL1197)%>%
+  mutate(COL1204=COL1201)%>%
+  mutate(COL1208=COL1205)%>%
+  mutate(COL1212=COL1209)%>%
+  mutate(COL1216=COL1213)%>%
+  mutate(COL1220=COL1217)%>%
+  mutate(COL1224=COL1221)%>%
+  mutate(COL1228=COL1225)%>%
+  mutate(COL1232=COL1229)%>%
+  mutate(COL1236=COL1233)%>%
+  mutate(COL1240=COL1237)%>%
+  mutate(COL1244=COL1241)%>%
+  mutate(COL1248=COL1245)%>%
+  mutate(COL1252=COL1249)%>%
+  mutate(COL1256=COL1253)%>%
+  mutate(COL1260=COL1257)%>%
+  mutate(COL1264=COL1261)%>%
+  mutate(COL1268=COL1265)%>%
+  mutate(COL1272=COL1269)%>%
+  mutate(COL1276=COL1273)%>%
+  mutate(COL1280=COL1277)%>%
+  mutate(COL1284=COL1281)%>%
+  mutate(COL1288=COL1285)%>%
+  mutate(COL1292=COL1289)%>%
+  mutate(COL1296=COL1293)%>%
+  mutate(COL1300=COL1297)%>%
+  mutate(COL1304=COL1301)%>%
+  mutate(COL1308=COL1305)%>%
+  mutate(COL1312=COL1309)%>%
+  mutate(COL1316=COL1313)%>%
+  mutate(COL1320=COL1317)%>%
+  mutate(COL1324=COL1321)%>%
+  mutate(COL1328=COL1325)%>%
+  mutate(COL1332=COL1329)%>%
+  mutate(COL1336=COL1333)%>%
+  mutate(COL1340=COL1337)%>%
+  mutate(COL1344=COL1341)%>%
+  mutate(COL1348=COL1345)%>%
+  mutate(COL1352=COL1349)%>%
+  mutate(COL1356=COL1353)%>%
+  mutate(COL1360=COL1357)%>%
+  mutate(COL1364=COL1361)%>%
+  mutate(COL1368=COL1365)%>%
+  mutate(COL1372=COL1369)%>%
+  mutate(COL1376=COL1373)%>%
+  mutate(COL1380=COL1377)%>%
+  mutate(COL1384=COL1381)%>%
+  mutate(COL1388=COL1385)%>%
+  mutate(COL1392=COL1389)%>%
+  mutate(COL1396=COL1393)%>%
+  mutate(COL1400=COL1397)%>%
+  mutate(COL1404=COL1401)%>%
+  mutate(COL1408=COL1405)%>%
+  mutate(COL1412=COL1409)%>%
+  mutate(COL1416=COL1413)%>%
+  mutate(COL1420=COL1417)%>%
+  mutate(COL1424=COL1421)%>%
+  mutate(COL1428=COL1425)%>%
+  mutate(COL1432=COL1429)%>%
+  mutate(COL1436=COL1433)%>%
+  mutate(COL1440=COL1437)%>%
+  mutate(COL1444=COL1441)%>%
+  mutate(COL1448=COL1445)%>%
+  mutate(COL1452=COL1449)%>%
+  mutate(COL1456=COL1453)%>%
+  mutate(COL1460=COL1457)%>%
+  mutate(COL1464=COL1461)%>%
+  mutate(COL1468=COL1465)%>%
+  mutate(COL1472=COL1469)%>%
+  mutate(COL1476=COL1473)%>%
+  mutate(COL1480=COL1477)%>%
+  mutate(COL1484=COL1481)%>%
+  mutate(COL1488=COL1485)%>%
+  mutate(COL1492=COL1489)%>%
+  mutate(COL1496=COL1493)%>%
+  mutate(COL1500=COL1497)%>%
+  mutate(COL1504=COL1501)%>%
+  mutate(COL1508=COL1505)%>%
+  mutate(COL1512=COL1509)%>%
+  mutate(COL1516=COL1513)%>%
+  mutate(COL1520=COL1517)%>%
+  mutate(COL1524=COL1521)%>%
+  mutate(COL1528=COL1525)%>%
+  mutate(COL1532=COL1529)%>%
+  mutate(COL1536=COL1533)%>%
+  mutate(COL1540=COL1537)%>%
+  mutate(COL1544=COL1541)%>%
+  mutate(COL1548=COL1545)%>%
+  mutate(COL1552=COL1549)%>%
+  mutate(COL1556=COL1553)%>%
+  mutate(COL1560=COL1557)%>%
+  mutate(COL1564=COL1561)%>%
+  mutate(COL1568=COL1565)%>%
+  mutate(COL1572=COL1569)%>%
+  mutate(COL1576=COL1573)%>%
+  mutate(COL1580=COL1577)%>%
+  mutate(COL1584=COL1581)%>%
+  mutate(COL1588=COL1585)%>%
+  mutate(COL1592=COL1589)%>%
+  mutate(COL1596=COL1593)%>%
+  mutate(COL1600=COL1597)%>%
+  mutate(COL1604=COL1601)%>%
+  mutate(COL1608=COL1605)%>%
+  mutate(COL1612=COL1609)%>%
+  mutate(COL1616=COL1613)%>%
+  mutate(COL1620=COL1617)%>%
+  mutate(COL1624=COL1621)%>%
+  mutate(COL1628=COL1625)%>%
+  mutate(COL1632=COL1629)%>%
+  mutate(COL1636=COL1633)%>%
+  mutate(COL1640=COL1637)%>%
+  mutate(COL1644=COL1641)%>%
+  mutate(COL1648=COL1645)%>%
+  mutate(COL1652=COL1649)%>%
+  mutate(COL1656=COL1653)%>%
+  mutate(COL1660=COL1657)%>%
+  mutate(COL1664=COL1661)%>%
+  mutate(COL1668=COL1665)%>%
+  mutate(COL1672=COL1669)%>%
+  mutate(COL1676=COL1673)%>%
+  mutate(COL1680=COL1677)%>%
+  mutate(COL1684=COL1681)%>%
+  mutate(COL1688=COL1685)%>%
+  mutate(COL1692=COL1689)%>%
+  mutate(COL1696=COL1693)%>%
+  mutate(COL1700=COL1697)%>%
+  mutate(COL1704=COL1701)%>%
+  mutate(COL1708=COL1705)%>%
+  mutate(COL1712=COL1709)%>%
+  mutate(COL1716=COL1713)%>%
+  mutate(COL1720=COL1717)%>%
+  mutate(COL1724=COL1721)%>%
+  mutate(COL1728=COL1725)%>%
+  mutate(COL1732=COL1729)%>%
+  mutate(COL1736=COL1733)%>%
+  mutate(COL1740=COL1737)%>%
+  mutate(COL1744=COL1741)%>%
+  mutate(COL1748=COL1745)%>%
+  mutate(COL1752=COL1749)%>%
+  mutate(COL1756=COL1753)%>%
+  mutate(COL1760=COL1757)%>%
+  mutate(COL1764=COL1761)%>%
+  mutate(COL1768=COL1765)%>%
+  mutate(COL1772=COL1769)%>%
+  mutate(COL1776=COL1773)%>%
+  mutate(COL1780=COL1777)%>%
+  mutate(COL1784=COL1781)%>%
+  mutate(COL1788=COL1785)%>%
+  mutate(COL1792=COL1789)%>%
+  mutate(COL1796=COL1793)%>%
+  mutate(COL1800=COL1797)%>%
+  mutate(COL1804=COL1801)%>%
+  mutate(COL1808=COL1805)%>%
+  mutate(COL1812=COL1809)%>%
+  mutate(COL1816=COL1813)%>%
+  mutate(COL1820=COL1817)%>%
+  mutate(COL1824=COL1821)%>%
+  mutate(COL1828=COL1825)%>%
+  mutate(COL1832=COL1829)%>%
+  mutate(COL1836=COL1833)%>%
+  mutate(COL1840=COL1837)%>%
+  mutate(COL1844=COL1841)%>%
+  mutate(COL1848=COL1845)%>%
+  mutate(COL1852=COL1849)%>%
+  mutate(COL1856=COL1853)%>%
+  mutate(COL1860=COL1857)%>%
+  mutate(COL1864=COL1861)%>%
+  mutate(COL1868=COL1865)%>%
+  mutate(COL1872=COL1869)%>%
+  mutate(COL1876=COL1873)%>%
+  mutate(COL1880=COL1877)%>%
+  mutate(COL1884=COL1881)%>%
+  mutate(COL1888=COL1885)%>%
+  mutate(COL1892=COL1889)%>%
+  mutate(COL1896=COL1893)%>%
+  mutate(COL1900=COL1897)%>%
+  mutate(COL1904=COL1901)%>%
+  mutate(COL1908=COL1905)%>%
+  mutate(COL1912=COL1909)%>%
+  mutate(COL1916=COL1913)%>%
+  mutate(COL1920=COL1917)%>%
+  mutate(COL1924=COL1921)%>%
+  mutate(COL1928=COL1925)%>%
+  mutate(COL1932=COL1929)%>%
+  mutate(COL1936=COL1933)%>%
+  mutate(COL1940=COL1937)%>%
+  mutate(COL1944=COL1941)%>%
+  mutate(COL1948=COL1945)%>%
+  mutate(COL1952=COL1949)%>%
+  mutate(COL1956=COL1953)%>%
+  mutate(COL1960=COL1957)%>%
+  mutate(COL1964=COL1961)%>%
+  mutate(COL1968=COL1965)%>%
+  mutate(COL1972=COL1969)%>%
+  mutate(COL1976=COL1973)%>%
+  mutate(COL1980=COL1977)%>%
+  mutate(COL1984=COL1981)%>%
+  mutate(COL1988=COL1985)%>%
+  mutate(COL1992=COL1989)%>%
+  mutate(COL1996=COL1993)%>%
+  #mutate(COL2000=COL1997)%>%
+  select(
+    COL1001,
+    COL1002,
+    COL1003,
+    COL1004,
+    COL1005,
+    COL1006,
+    COL1007,
+    COL1008,
+    COL1009,
+    COL1010,
+    COL1011,
+    COL1012,
+    COL1013,
+    COL1014,
+    COL1015,
+    COL1016,
+    COL1017,
+    COL1018,
+    COL1019,
+    COL1020,
+    COL1021,
+    COL1022,
+    COL1023,
+    COL1024,
+    COL1025,
+    COL1026,
+    COL1027,
+    COL1028,
+    COL1029,
+    COL1030,
+    COL1031,
+    COL1032,
+    COL1033,
+    COL1034,
+    COL1035,
+    COL1036,
+    COL1037,
+    COL1038,
+    COL1039,
+    COL1040,
+    COL1041,
+    COL1042,
+    COL1043,
+    COL1044,
+    COL1045,
+    COL1046,
+    COL1047,
+    COL1048,
+    COL1049,
+    COL1050,
+    COL1051,
+    COL1052,
+    COL1053,
+    COL1054,
+    COL1055,
+    COL1056,
+    COL1057,
+    COL1058,
+    COL1059,
+    COL1060,
+    COL1061,
+    COL1062,
+    COL1063,
+    COL1064,
+    COL1065,
+    COL1066,
+    COL1067,
+    COL1068,
+    COL1069,
+    COL1070,
+    COL1071,
+    COL1072,
+    COL1073,
+    COL1074,
+    COL1075,
+    COL1076,
+    COL1077,
+    COL1078,
+    COL1079,
+    COL1080,
+    COL1081,
+    COL1082,
+    COL1083,
+    COL1084,
+    COL1085,
+    COL1086,
+    COL1087,
+    COL1088,
+    COL1089,
+    COL1090,
+    COL1091,
+    COL1092,
+    COL1093,
+    COL1094,
+    COL1095,
+    COL1096,
+    COL1097,
+    COL1098,
+    COL1099,
+    COL1100,
+    COL1101,
+    COL1102,
+    COL1103,
+    COL1104,
+    COL1105,
+    COL1106,
+    COL1107,
+    COL1108,
+    COL1109,
+    COL1110,
+    COL1111,
+    COL1112,
+    COL1113,
+    COL1114,
+    COL1115,
+    COL1116,
+    COL1117,
+    COL1118,
+    COL1119,
+    COL1120,
+    COL1121,
+    COL1122,
+    COL1123,
+    COL1124,
+    COL1125,
+    COL1126,
+    COL1127,
+    COL1128,
+    COL1129,
+    COL1130,
+    COL1131,
+    COL1132,
+    COL1133,
+    COL1134,
+    COL1135,
+    COL1136,
+    COL1137,
+    COL1138,
+    COL1139,
+    COL1140,
+    COL1141,
+    COL1142,
+    COL1143,
+    COL1144,
+    COL1145,
+    COL1146,
+    COL1147,
+    COL1148,
+    COL1149,
+    COL1150,
+    COL1151,
+    COL1152,
+    COL1153,
+    COL1154,
+    COL1155,
+    COL1156,
+    COL1157,
+    COL1158,
+    COL1159,
+    COL1160,
+    COL1161,
+    COL1162,
+    COL1163,
+    COL1164,
+    COL1165,
+    COL1166,
+    COL1167,
+    COL1168,
+    COL1169,
+    COL1170,
+    COL1171,
+    COL1172,
+    COL1173,
+    COL1174,
+    COL1175,
+    COL1176,
+    COL1177,
+    COL1178,
+    COL1179,
+    COL1180,
+    COL1181,
+    COL1182,
+    COL1183,
+    COL1184,
+    COL1185,
+    COL1186,
+    COL1187,
+    COL1188,
+    COL1189,
+    COL1190,
+    COL1191,
+    COL1192,
+    COL1193,
+    COL1194,
+    COL1195,
+    COL1196,
+    COL1197,
+    COL1198,
+    COL1199,
+    COL1200,
+    COL1201,
+    COL1202,
+    COL1203,
+    COL1204,
+    COL1205,
+    COL1206,
+    COL1207,
+    COL1208,
+    COL1209,
+    COL1210,
+    COL1211,
+    COL1212,
+    COL1213,
+    COL1214,
+    COL1215,
+    COL1216,
+    COL1217,
+    COL1218,
+    COL1219,
+    COL1220,
+    COL1221,
+    COL1222,
+    COL1223,
+    COL1224,
+    COL1225,
+    COL1226,
+    COL1227,
+    COL1228,
+    COL1229,
+    COL1230,
+    COL1231,
+    COL1232,
+    COL1233,
+    COL1234,
+    COL1235,
+    COL1236,
+    COL1237,
+    COL1238,
+    COL1239,
+    COL1240,
+    COL1241,
+    COL1242,
+    COL1243,
+    COL1244,
+    COL1245,
+    COL1246,
+    COL1247,
+    COL1248,
+    COL1249,
+    COL1250,
+    COL1251,
+    COL1252,
+    COL1253,
+    COL1254,
+    COL1255,
+    COL1256,
+    COL1257,
+    COL1258,
+    COL1259,
+    COL1260,
+    COL1261,
+    COL1262,
+    COL1263,
+    COL1264,
+    COL1265,
+    COL1266,
+    COL1267,
+    COL1268,
+    COL1269,
+    COL1270,
+    COL1271,
+    COL1272,
+    COL1273,
+    COL1274,
+    COL1275,
+    COL1276,
+    COL1277,
+    COL1278,
+    COL1279,
+    COL1280,
+    COL1281,
+    COL1282,
+    COL1283,
+    COL1284,
+    COL1285,
+    COL1286,
+    COL1287,
+    COL1288,
+    COL1289,
+    COL1290,
+    COL1291,
+    COL1292,
+    COL1293,
+    COL1294,
+    COL1295,
+    COL1296,
+    COL1297,
+    COL1298,
+    COL1299,
+    COL1300,
+    COL1301,
+    COL1302,
+    COL1303,
+    COL1304,
+    COL1305,
+    COL1306,
+    COL1307,
+    COL1308,
+    COL1309,
+    COL1310,
+    COL1311,
+    COL1312,
+    COL1313,
+    COL1314,
+    COL1315,
+    COL1316,
+    COL1317,
+    COL1318,
+    COL1319,
+    COL1320,
+    COL1321,
+    COL1322,
+    COL1323,
+    COL1324,
+    COL1325,
+    COL1326,
+    COL1327,
+    COL1328,
+    COL1329,
+    COL1330,
+    COL1331,
+    COL1332,
+    COL1333,
+    COL1334,
+    COL1335,
+    COL1336,
+    COL1337,
+    COL1338,
+    COL1339,
+    COL1340,
+    COL1341,
+    COL1342,
+    COL1343,
+    COL1344,
+    COL1345,
+    COL1346,
+    COL1347,
+    COL1348,
+    COL1349,
+    COL1350,
+    COL1351,
+    COL1352,
+    COL1353,
+    COL1354,
+    COL1355,
+    COL1356,
+    COL1357,
+    COL1358,
+    COL1359,
+    COL1360,
+    COL1361,
+    COL1362,
+    COL1363,
+    COL1364,
+    COL1365,
+    COL1366,
+    COL1367,
+    COL1368,
+    COL1369,
+    COL1370,
+    COL1371,
+    COL1372,
+    COL1373,
+    COL1374,
+    COL1375,
+    COL1376,
+    COL1377,
+    COL1378,
+    COL1379,
+    COL1380,
+    COL1381,
+    COL1382,
+    COL1383,
+    COL1384,
+    COL1385,
+    COL1386,
+    COL1387,
+    COL1388,
+    COL1389,
+    COL1390,
+    COL1391,
+    COL1392,
+    COL1393,
+    COL1394,
+    COL1395,
+    COL1396,
+    COL1397,
+    COL1398,
+    COL1399,
+    COL1400,
+    COL1401,
+    COL1402,
+    COL1403,
+    COL1404,
+    COL1405,
+    COL1406,
+    COL1407,
+    COL1408,
+    COL1409,
+    COL1410,
+    COL1411,
+    COL1412,
+    COL1413,
+    COL1414,
+    COL1415,
+    COL1416,
+    COL1417,
+    COL1418,
+    COL1419,
+    COL1420,
+    COL1421,
+    COL1422,
+    COL1423,
+    COL1424,
+    COL1425,
+    COL1426,
+    COL1427,
+    COL1428,
+    COL1429,
+    COL1430,
+    COL1431,
+    COL1432,
+    COL1433,
+    COL1434,
+    COL1435,
+    COL1436,
+    COL1437,
+    COL1438,
+    COL1439,
+    COL1440,
+    COL1441,
+    COL1442,
+    COL1443,
+    COL1444,
+    COL1445,
+    COL1446,
+    COL1447,
+    COL1448,
+    COL1449,
+    COL1450,
+    COL1451,
+    COL1452,
+    COL1453,
+    COL1454,
+    COL1455,
+    COL1456,
+    COL1457,
+    COL1458,
+    COL1459,
+    COL1460,
+    COL1461,
+    COL1462,
+    COL1463,
+    COL1464,
+    COL1465,
+    COL1466,
+    COL1467,
+    COL1468,
+    COL1469,
+    COL1470,
+    COL1471,
+    COL1472,
+    COL1473,
+    COL1474,
+    COL1475,
+    COL1476,
+    COL1477,
+    COL1478,
+    COL1479,
+    COL1480,
+    COL1481,
+    COL1482,
+    COL1483,
+    COL1484,
+    COL1485,
+    COL1486,
+    COL1487,
+    COL1488,
+    COL1489,
+    COL1490,
+    COL1491,
+    COL1492,
+    COL1493,
+    COL1494,
+    COL1495,
+    COL1496,
+    COL1497,
+    COL1498,
+    COL1499,
+    COL1500,
+    COL1501,
+    COL1502,
+    COL1503,
+    COL1504,
+    COL1505,
+    COL1506,
+    COL1507,
+    COL1508,
+    COL1509,
+    COL1510,
+    COL1511,
+    COL1512,
+    COL1513,
+    COL1514,
+    COL1515,
+    COL1516,
+    COL1517,
+    COL1518,
+    COL1519,
+    COL1520,
+    COL1521,
+    COL1522,
+    COL1523,
+    COL1524,
+    COL1525,
+    COL1526,
+    COL1527,
+    COL1528,
+    COL1529,
+    COL1530,
+    COL1531,
+    COL1532,
+    COL1533,
+    COL1534,
+    COL1535,
+    COL1536,
+    COL1537,
+    COL1538,
+    COL1539,
+    COL1540,
+    COL1541,
+    COL1542,
+    COL1543,
+    COL1544,
+    COL1545,
+    COL1546,
+    COL1547,
+    COL1548,
+    COL1549,
+    COL1550,
+    COL1551,
+    COL1552,
+    COL1553,
+    COL1554,
+    COL1555,
+    COL1556,
+    COL1557,
+    COL1558,
+    COL1559,
+    COL1560,
+    COL1561,
+    COL1562,
+    COL1563,
+    COL1564,
+    COL1565,
+    COL1566,
+    COL1567,
+    COL1568,
+    COL1569,
+    COL1570,
+    COL1571,
+    COL1572,
+    COL1573,
+    COL1574,
+    COL1575,
+    COL1576,
+    COL1577,
+    COL1578,
+    COL1579,
+    COL1580,
+    COL1581,
+    COL1582,
+    COL1583,
+    COL1584,
+    COL1585,
+    COL1586,
+    COL1587,
+    COL1588,
+    COL1589,
+    COL1590,
+    COL1591,
+    COL1592,
+    COL1593,
+    COL1594,
+    COL1595,
+    COL1596,
+    COL1597,
+    COL1598,
+    COL1599,
+    COL1600,
+    COL1601,
+    COL1602,
+    COL1603,
+    COL1604,
+    COL1605,
+    COL1606,
+    COL1607,
+    COL1608,
+    COL1609,
+    COL1610,
+    COL1611,
+    COL1612,
+    COL1613,
+    COL1614,
+    COL1615,
+    COL1616,
+    COL1617,
+    COL1618,
+    COL1619,
+    COL1620,
+    COL1621,
+    COL1622,
+    COL1623,
+    COL1624,
+    COL1625,
+    COL1626,
+    COL1627,
+    COL1628,
+    COL1629,
+    COL1630,
+    COL1631,
+    COL1632,
+    COL1633,
+    COL1634,
+    COL1635,
+    COL1636,
+    COL1637,
+    COL1638,
+    COL1639,
+    COL1640,
+    COL1641,
+    COL1642,
+    COL1643,
+    COL1644,
+    COL1645,
+    COL1646,
+    COL1647,
+    COL1648,
+    COL1649,
+    COL1650,
+    COL1651,
+    COL1652,
+    COL1653,
+    COL1654,
+    COL1655,
+    COL1656,
+    COL1657,
+    COL1658,
+    COL1659,
+    COL1660,
+    COL1661,
+    COL1662,
+    COL1663,
+    COL1664,
+    COL1665,
+    COL1666,
+    COL1667,
+    COL1668,
+    COL1669,
+    COL1670,
+    COL1671,
+    COL1672,
+    COL1673,
+    COL1674,
+    COL1675,
+    COL1676,
+    COL1677,
+    COL1678,
+    COL1679,
+    COL1680,
+    COL1681,
+    COL1682,
+    COL1683,
+    COL1684,
+    COL1685,
+    COL1686,
+    COL1687,
+    COL1688,
+    COL1689,
+    COL1690,
+    COL1691,
+    COL1692,
+    COL1693,
+    COL1694,
+    COL1695,
+    COL1696,
+    COL1697,
+    COL1698,
+    COL1699,
+    COL1700,
+    COL1701,
+    COL1702,
+    COL1703,
+    COL1704,
+    COL1705,
+    COL1706,
+    COL1707,
+    COL1708,
+    COL1709,
+    COL1710,
+    COL1711,
+    COL1712,
+    COL1713,
+    COL1714,
+    COL1715,
+    COL1716,
+    COL1717,
+    COL1718,
+    COL1719,
+    COL1720,
+    COL1721,
+    COL1722,
+    COL1723,
+    COL1724,
+    COL1725,
+    COL1726,
+    COL1727,
+    COL1728,
+    COL1729,
+    COL1730,
+    COL1731,
+    COL1732,
+    COL1733,
+    COL1734,
+    COL1735,
+    COL1736,
+    COL1737,
+    COL1738,
+    COL1739,
+    COL1740,
+    COL1741,
+    COL1742,
+    COL1743,
+    COL1744,
+    COL1745,
+    COL1746,
+    COL1747,
+    COL1748,
+    COL1749,
+    COL1750,
+    COL1751,
+    COL1752,
+    COL1753,
+    COL1754,
+    COL1755,
+    COL1756,
+    COL1757,
+    COL1758,
+    COL1759,
+    COL1760,
+    COL1761,
+    COL1762,
+    COL1763,
+    COL1764,
+    COL1765,
+    COL1766,
+    COL1767,
+    COL1768,
+    COL1769,
+    COL1770,
+    COL1771,
+    COL1772,
+    COL1773,
+    COL1774,
+    COL1775,
+    COL1776,
+    COL1777,
+    COL1778,
+    COL1779,
+    COL1780,
+    COL1781,
+    COL1782,
+    COL1783,
+    COL1784,
+    COL1785,
+    COL1786,
+    COL1787,
+    COL1788,
+    COL1789,
+    COL1790,
+    COL1791,
+    COL1792,
+    COL1793,
+    COL1794,
+    COL1795,
+    COL1796,
+    COL1797,
+    COL1798,
+    COL1799,
+    COL1800,
+    COL1801,
+    COL1802,
+    COL1803,
+    COL1804,
+    COL1805,
+    COL1806,
+    COL1807,
+    COL1808,
+    COL1809,
+    COL1810,
+    COL1811,
+    COL1812,
+    COL1813,
+    COL1814,
+    COL1815,
+    COL1816,
+    COL1817,
+    COL1818,
+    COL1819,
+    COL1820,
+    COL1821,
+    COL1822,
+    COL1823,
+    COL1824,
+    COL1825,
+    COL1826,
+    COL1827,
+    COL1828,
+    COL1829,
+    COL1830,
+    COL1831,
+    COL1832,
+    COL1833,
+    COL1834,
+    COL1835,
+    COL1836,
+    COL1837,
+    COL1838,
+    COL1839,
+    COL1840,
+    COL1841,
+    COL1842,
+    COL1843,
+    COL1844,
+    COL1845,
+    COL1846,
+    COL1847,
+    COL1848,
+    COL1849,
+    COL1850,
+    COL1851,
+    COL1852,
+    COL1853,
+    COL1854,
+    COL1855,
+    COL1856,
+    COL1857,
+    COL1858,
+    COL1859,
+    COL1860,
+    COL1861,
+    COL1862,
+    COL1863,
+    COL1864,
+    COL1865,
+    COL1866,
+    COL1867,
+    COL1868,
+    COL1869,
+    COL1870,
+    COL1871,
+    COL1872,
+    COL1873,
+    COL1874,
+    COL1875,
+    COL1876,
+    COL1877,
+    COL1878,
+    COL1879,
+    COL1880,
+    COL1881,
+    COL1882,
+    COL1883,
+    COL1884,
+    COL1885,
+    COL1886,
+    COL1887,
+    COL1888,
+    COL1889,
+    COL1890,
+    COL1891,
+    COL1892,
+    COL1893,
+    COL1894,
+    COL1895,
+    COL1896,
+    COL1897,
+    COL1898,
+    COL1899,
+    COL1900,
+    COL1901,
+    COL1902,
+    COL1903,
+    COL1904,
+    COL1905,
+    COL1906,
+    COL1907,
+    COL1908,
+    COL1909,
+    COL1910,
+    COL1911,
+    COL1912,
+    COL1913,
+    COL1914,
+    COL1915,
+    COL1916,
+    COL1917,
+    COL1918,
+    COL1919,
+    COL1920,
+    COL1921,
+    COL1922,
+    COL1923,
+    COL1924,
+    COL1925,
+    COL1926,
+    COL1927,
+    COL1928,
+    COL1929,
+    COL1930,
+    COL1931,
+    COL1932,
+    COL1933,
+    COL1934,
+    COL1935,
+    COL1936,
+    COL1937,
+    COL1938,
+    COL1939,
+    COL1940,
+    COL1941,
+    COL1942,
+    COL1943,
+    COL1944,
+    COL1945,
+    COL1946,
+    COL1947,
+    COL1948,
+    COL1949,
+    COL1950,
+    COL1951,
+    COL1952,
+    COL1953,
+    COL1954,
+    COL1955,
+    COL1956,
+    COL1957,
+    COL1958,
+    COL1959,
+    COL1960,
+    COL1961,
+    COL1962,
+    COL1963,
+    COL1964,
+    COL1965,
+    COL1966,
+    COL1967,
+    COL1968,
+    COL1969,
+    COL1970,
+    COL1971,
+    COL1972,
+    COL1973,
+    COL1974,
+    COL1975,
+    COL1976,
+    COL1977,
+    COL1978,
+    COL1979,
+    COL1980,
+    COL1981,
+    COL1982,
+    COL1983,
+    COL1984,
+    COL1985,
+    COL1986,
+    COL1987,
+    COL1988,
+    COL1989,
+    COL1990,
+    COL1991,
+    COL1992,
+    COL1993,
+    COL1994,
+    COL1995,
+    COL1996,
+    #COL1997,
+    #COL1998,
+    #COL1999,
+    #COL2000,
+  )
+
+
+#Augmentation verticle----
+Carte_province1000658<-Carte_province1000658[1:250,] #On prend les 250 lignes
+
+Liste250 <- 1:250 # on rajoute une colonne avec chiffre de 1 à 250
+data.frame(Liste250)
+Carte_province1000658<-cbind(Carte_province1000658, Liste250)
+
+Carte_province1000658_part2<-Carte_province1000658 #On a deux data frame de 250 lignes
+
+#On crée un 3e data frame de 158 lignes 
+liste250_60POURCENT<- sample(x = 1:250, size = 158, replace = FALSE) #Je retire 60% des chiffres parmi les 250
+liste250_60POURCENT<- data.frame(liste250_60POURCENT)
+
+Carte_province1000658_part3<-Carte_province1000658%>%mutate(soixsantepourcent_vrai_faux =  if_else(Carte_province1000658$Liste250 %in%liste250_60POURCENT$liste250_60POURCENT, TRUE, FALSE) ) #On doi tprendre 60 % des lignes
+Carte_province1000658_part3%>%group_by(soixsantepourcent_vrai_faux) %>%tally() 
+Carte_province1000658_part3<-Carte_province1000658_part3%>%filter(soixsantepourcent_vrai_faux== TRUE)
+Carte_province1000658_part3<-Carte_province1000658_part3%>%select(-soixsantepourcent_vrai_faux)
+
+#On aditionne les 3 data frame de 250, 250 et 158 lignes
+Carte_province1000658<-rbind(Carte_province1000658,Carte_province1000658_part2,Carte_province1000658_part3)
+rm(Carte_province1000658_part3,Carte_province1000658_part2, liste250_60POURCENT)
+
+Carte_province1000658<- Carte_province1000658%>%arrange(Liste250)
+#Le fichier excell est augemnté
+Carte_province1000658
+
+
+#Export du fichier 
+
+write.csv2(Carte_province1000658, paste0(path, "Carte_province1000658.csv"), fileEncoding = "UTF-16BE")
+
+
+
+#Et puis on filtre cartprovince PART3 sur cette liste
